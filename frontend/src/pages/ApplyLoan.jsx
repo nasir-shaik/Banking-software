@@ -32,12 +32,13 @@ function ApplyLoan() {
 
     try {
       const response = await axios.post(
-        "http://localhost:8000/api/loan-application",
-        formData
+        //"http://localhost:8000/api/loan-application",
+        "https://banking-software-backend.onrender.com/api/loan-application",
+        formData,
       );
 
       alert(
-        `Application Submitted Successfully!\n\nApplication Number: ${response.data.application_no}`
+        `Application Submitted Successfully!\n\nApplication Number: ${response.data.application_no}`,
       );
 
       setFormData({
